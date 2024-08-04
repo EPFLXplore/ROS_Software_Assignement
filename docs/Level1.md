@@ -2,6 +2,13 @@
 
 Welcome to Level 1 of the assignment! This level will introduce you to Docker and ROS, essential tools for modern robotics development. By the end of this level, you'll have Docker and ROS up and running and will be ready to dive into more advanced topics.
 
+## Objectives
+
+- Introduction to the Concepts
+- Install Docker, ROS and test built-in Commands
+
+### Approximate Time: 1h
+
 ## Introduction to Docker
 
 ### What is Docker?
@@ -77,6 +84,10 @@ Actions are similar to services but are designed for long-running tasks. They al
 
 ![Actions ROS](https://docs.ros.org/en/foxy/_images/Action-SingleActionClient.gif)
 
+#### Packages
+
+A ROS 2 package is a fundamental unit for organizing software in ROS 2. It typically contains a set of related nodes, libraries, scripts, or configurations. Packages allow developers to modularize their code, making it easier to share, reuse, and maintain. Think of it as a module that can be used on its own. Each package can include source code, message and service definitions, launch files, and other resources. The structure of a ROS 2 package includes mandatory files such as package.xml (metadata about the package) and CMakeLists.txt (build instructions), or setup.py for Python packages.
+
 ## Setup
 
 ### Installation
@@ -127,11 +138,17 @@ Now that you have a basic understanding of Docker and ROS, let's get hands-on!
 
    This will place your new terminal window inside the container.
 
-5. **Monitor a node**. If previous command worked, we can now try to start a node:
+5. **Monitor a node**. If previous commands worked, we can now try to start a node:
    ```sh
    ros2 node list
    ros2 topic list
    ros2 topic echo /topic
    ```
+   Observe the difference of output with the first two commands. You can now see that their output is not empty, as we just started a ROS 2 node that publishes information. The last command shows you the information sent.
 
-By completing these steps, you will have a running Docker container with ROS 2 Humble installed. You are now ready to start exploring ROS and building your robotic applications!
+By completing these steps, you have now a running Docker container with ROS 2 Humble installed. You are now ready to start exploring ROS and building your robotic applications!
+
+Congratulations on completing Level 1! You are now ready to move on to creating your first node in [Level 2](./Level2.md).
+
+> [!NOTE]  
+> You can stop the container with CTRL + D inside the first terminal you opened inside the Docker. We will open it back later.

@@ -59,11 +59,7 @@ Detailed instructions for Level 3 can be found in the [Level 3 file](./docs/Leve
 
 You will need to fork the repository, and install Docker. Follow the procedure for your system:
 
-<div align="center">
 [Windows](./docs/InstallWindows.md) | [Mac M1](./docs/InstallMac.md) | [Ubuntu](./docs/InstallLinux.md)
-
-<br>
-</div>
 
 ## Useful Resources
 
@@ -80,4 +76,4 @@ We have compiled a list of useful Linux, Docker, and ROS commands to assist you 
 
 Good luck, and we look forward to meeting you and seeing your progress during the interview!
 
-<iframe src="https://giphy.com/embed/VbnUQpnihPSIgIXuZv" width="384" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/computer-cat-wearing-glasses-VbnUQpnihPSIgIXuZv">via GIPHY</a></p>
+![Gif](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZib3ZmdWVtdGNyOGxtaWw2aHVwcDd5OTI3bXM1ZWZpNzczM3ZjMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VbnUQpnihPSIgIXuZv/giphy.gif)
