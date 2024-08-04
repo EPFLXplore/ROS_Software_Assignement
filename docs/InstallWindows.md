@@ -82,6 +82,9 @@ Ensure your system meets the following requirements:
 
 ## Step 5: Download Docker Desktop for Windows
 
+> [!NOTE]  
+> If you have troubles with the installation, check the Docker [Installation](https://docs.docker.com/desktop/install/windows-install/) page for Windows.
+
 1. **Download Docker Desktop:**
 
    - Go to the [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop) page and click "Download for Windows".
