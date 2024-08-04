@@ -26,17 +26,19 @@ The publisher will send a `Twist` message, which the subscriber will interpret a
 - `t`: Rotate Left (+ry)
 - `y`: Rotate Right (-ry)
 
+![Rover Axes](image.png)
+
 ### Subscriber Interpretation
 
 The subscriber will receive the data and transform it into a coherent string, filtering out impossible commands:
 
-- `x`: “Go [Forward / Backward]”
-- `x` and `ry`: “Go [Left / Right]”
-- `z`: “Slide [Left / Right]”
-- `ry`: “Rotating on itself to the [Left / Right]”
-- `z` and `ry`, `x` and `z`: “Forbidden move”
+- `Tx axis`: “Go [Forward / Backward]”
+- `Tx axis` and `Ry axis`: “Go [Left / Right]”
+- `Tz axis`: “Slide [Left / Right]”
+- `Ry axis`: “Rotating on itself to the [Left / Right]”
+- `Tz axis` and `Ry axis`, `Tx axis` and `Tz axis`: “Forbidden move”
 
-It will also print the position: “New Position: [x, z, ry]”, where translation is updated after rotation if both are present.
+It will also print the position: “New Position: `[x, z, orientation (Ry)]`”, where translation is updated after rotation if both are present.
 
 ## Step-by-Step Instructions
 
@@ -125,7 +127,7 @@ It will also print the position: “New Position: [x, z, ry]”, where translati
 
         # Function that prompts user for a direction input, and sends the command
         def cmd_acquisition(self):
-           command = input("Enter command (w/a/s/d/t/y - max 2 char): ")
+           command = input("Enter command (w/a/s/d/t/y - max 2 characters): ")
            # TODO: Complete the function to transform the input into the right command.
            # Your code here
            pass
