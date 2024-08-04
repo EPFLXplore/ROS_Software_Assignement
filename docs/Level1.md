@@ -109,6 +109,8 @@ Now that you have a basic understanding of Docker and ROS, let's get hands-on!
 
 1. **Run the Docker container**:
 
+   Open your terminal and go inside the docker_humble_desktop folder. Type the following command, according to your system:
+
    ```sh
    ./run.sh (Mac or Linux)
    run.bat (Windows)

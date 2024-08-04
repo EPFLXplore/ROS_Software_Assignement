@@ -9,7 +9,52 @@ Ensure your system meets the following requirements:
 - Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later) or Windows 11
 - Enable the WSL 2 feature on Windows. Docker Desktop requires the Windows Subsystem for Linux 2 (WSL 2) to run.
 
-## Step 2: Enable WSL 2 Feature
+## Step 2: Install Git
+
+1. **Check if Git is installed:**
+   Open PowerShell and type:
+
+   ```powershell
+   git --version
+   ```
+
+   If Git is installed, you will see the version number. If not, proceed to the next step.
+
+2. **Download Git for Windows:**
+   Go to the [Git for Windows](https://gitforwindows.org/) page and click "Download".
+
+3. **Run the Installer:**
+   Run the downloaded installer and follow the instructions in the setup wizard. You can use the default settings for most options.
+
+4. **Verify the Installation:**
+   Open PowerShell and run:
+   ```powershell
+   git --version
+   ```
+   You should see the Git version number if the installation was successful.
+
+## Step 3: Fork the Repository on GitHub
+
+1. **Go to the GitHub repository:**
+   Open your web browser and navigate to the repository URL.
+
+2. **Fork the repository:**
+   Click the "Fork" button on the top-right corner of the page. This will create a copy of the repository in your GitHub account.
+
+3. **Clone the forked repository:**
+   Open Terminal and run the following command, replacing `<your-username>` with your GitHub username:
+
+   ```sh
+   git clone git@github.com:<your-username>/ROS_Software_Assignement.git
+   ```
+
+   Navigate to the cloned repository:
+
+   ```sh
+   cd ROS_Software_Assignement
+   ```
+
+## Step 4: Enable WSL 2 Feature
 
 1. **Enable WSL 1:**
 
@@ -35,7 +80,7 @@ Ensure your system meets the following requirements:
 4. **Install a Linux Distribution:**
    - Go to the Microsoft Store, search for "Linux" or "Ubuntu", and install your preferred Linux distribution.
 
-## Step 3: Download Docker Desktop for Windows
+## Step 5: Download Docker Desktop for Windows
 
 1. **Download Docker Desktop:**
 
@@ -61,7 +106,7 @@ Ensure your system meets the following requirements:
 4. **Complete the Setup:**
    - Follow the guided onboarding to complete the setup.
 
-## Step 5: Verify Docker Installation
+## Step 6: Verify Docker Installation
 
 1. **Open PowerShell or Command Prompt:**
 
@@ -83,7 +128,7 @@ Ensure your system meets the following requirements:
 
    This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message.
 
-## Step 6: Using Docker with WSL 2
+## Step 7: Using Docker with WSL 2
 
 1. **Set WSL 2 Integration:**
 

@@ -61,6 +61,12 @@ You will need to fork the repository, and install Docker. Follow the procedure f
 
 [Windows](./docs/InstallWindows.md) | [Mac M1](./docs/InstallMac.md) | [Ubuntu](./docs/InstallLinux.md)
 
+## Troubleshooting
+
+If you have any trouble or problem with the assignement, do not hesitate to ask questions. Post a new question on the Issue tab of the GitHub repository.
+
+[+ Create Issue](https://github.com/EPFLXplore/ROS_Software_Assignement/issues/new/choose)
+
 ## Useful Resources
 
 Here are some resources to help you throughout the assignment:

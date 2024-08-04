@@ -9,7 +9,54 @@ Ensure your system meets the following requirements:
 - macOS must be version 10.14 or newer.
 - You have administrative privileges on your macOS system.
 
-## Step 2: Download Docker Desktop for Mac
+## Step 2: Install Git
+
+If Git is not already installed, follow these steps to install it:
+
+1. **Check if Git is installed:**
+   Open Terminal and type:
+
+   ```sh
+   git --version
+   ```
+
+   If Git is installed, you will see the version number. If not, you need to install it.
+
+2. **Install Git using Homebrew:**
+   If Homebrew is not installed, install it first by running:
+
+   ```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+   Then, install Git:
+
+   ```sh
+   brew install git
+   ```
+
+## Step 3: Fork the Repository on GitHub
+
+1. **Go to the GitHub repository:**
+   Open your web browser and navigate to the repository URL.
+
+2. **Fork the repository:**
+   Click the "Fork" button on the top-right corner of the page. This will create a copy of the repository in your GitHub account.
+
+3. **Clone the forked repository:**
+   Open Terminal and run the following command, replacing `<your-username>` with your GitHub username:
+
+   ```sh
+   git clone git@github.com:<your-username>/ROS_Software_Assignement.git
+   ```
+
+   Navigate to the cloned repository:
+
+   ```sh
+   cd ROS_Software_Assignement
+   ```
+
+## Step 4: Download Docker Desktop for Mac
 
 1. **Download Docker Desktop:**
    - Go to the [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop) page and click "Download for Mac".
@@ -32,7 +79,7 @@ Ensure your system meets the following requirements:
    - You might be prompted to enter your password to install a helper tool. Enter your password and proceed with the installation.
    - Follow the guided onboarding to complete the setup.
 
-## Step 4: Verify Docker Installation
+## Step 5: Verify Docker Installation
 
 1. **Open Terminal:**
 
@@ -53,15 +100,6 @@ Ensure your system meets the following requirements:
      ```
 
    This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message.
-
-## Step 5: Configure Docker Desktop
-
-1. **Open Docker Desktop Preferences:**
-
-   - Click on the Docker icon in the menu bar and select "Preferences".
-
-2. **Configure Resources:**
-   - Under the "Resources" tab, you can allocate CPU, memory, and disk resources to Docker. Adjust these settings based on your system's capabilities and your workload requirements.
 
 ## Step 6: Using Docker
 
