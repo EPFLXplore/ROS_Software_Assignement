@@ -24,6 +24,9 @@ In this assignment, you will:
 
 These tasks are designed to simulate real-world challenges you might face while working on the Xplore rover project. By the end of this assignment, you should have a solid understanding of ROS basics and be well-prepared to contribute to our team.
 
+> [!NOTE]
+> Though you might not directly work on ROS (for example if you do Machine Learning), these knowledge will be extremely useful to integrate your code in the pipeline.
+
 ## Assignment Levels
 
 ### Level 1: Introduction and Setup
