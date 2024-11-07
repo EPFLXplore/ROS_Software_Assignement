@@ -25,18 +25,9 @@ The server will respond with a boolean indicating whether the position is allowe
 
 ### Step 1: Create a ROS Service
 
-1. **Create a new ROS package for the message definition**:
+1. **Create the service definition**:
 
-   Inside the Docker container, create a new package named `custom_msgs`:
-
-   ```sh
-   cd ~/dev_ws/src
-   ros2 pkg create --build-type ament_cmake custom_msgs
-   ```
-
-2. **Create the service definition**:
-
-   Inside the `custom_msgs` package, create a new directory called `srv` and define a new service file named `CheckPosition.srv`.
+   Inside the `custom_msg` package, create a new directory called `srv` and define a new service file named `CheckPosition.srv`.
 
    Add the following content to `CheckPosition.srv`:
 
@@ -51,9 +42,9 @@ The server will respond with a boolean indicating whether the position is allowe
 
    This defines a service that takes three `float64` inputs (x, z and ry) and returns a boolean (`is_allowed`) and a string (`suggestion`).
 
-3. **Update `CMakeLists.txt`**:
+2. **Update `CMakeLists.txt`**:
 
-   In the `custom_msgs` package directory, open `CMakeLists.txt` and add the following lines to find the necessary packages and generate the service files:
+   In the `custom_msg` package directory, open `CMakeLists.txt` and add the following lines to find the necessary packages and generate the service files:
 
    ```cmake
    find_package(rosidl_default_generators REQUIRED)
@@ -75,7 +66,7 @@ The server will respond with a boolean indicating whether the position is allowe
    ```python
    import rclpy
    from rclpy.node import Node
-   from rover_commands.srv import CheckPosition
+   from custom_msg.srv import CheckPosition
 
    class CheckPositionServer(Node):
 

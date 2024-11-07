@@ -110,7 +110,7 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
    ```python
    import rclpy
    from rclpy.node import Node
-   from geometry_msgs.msg.Twist
+   from geometry_msgs.msg import Twist
 
    class TrajectoryPublisher(Node):
 
