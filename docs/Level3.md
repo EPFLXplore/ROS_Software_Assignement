@@ -154,7 +154,7 @@ The server will respond with a boolean indicating whether the position is allowe
             self.position = {'x': 0.0, 'z': 0.0, 'ry': 0.0}
 
         def send_request(self, x, z):
-             # TODO: Send the request to the server synchronously
+             # TODO: Send the request to the server asynchronously
              # Your code here
 
         def listener_callback(self, msg):
