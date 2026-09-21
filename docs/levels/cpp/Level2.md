@@ -30,7 +30,7 @@ The publisher will send a `Twist` message, which the subscriber will interpret a
 - `t`: Rotate Left (+ry)
 - `y`: Rotate Right (-ry)
 
-![Rover Axes](image.png)
+![Rover Axes](../../image.png)
 
 ### Subscriber Interpretation
 
