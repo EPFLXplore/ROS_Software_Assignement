@@ -21,7 +21,9 @@ In addition to what you did in level 2, you will now have to work with the follo
 >
 > The `ProcessNode` calculation should work the following way:
 >
-> Always keep the latest `input_cmd`-provided `Twist`, and whenever there is a `correction_cmd`-provided `Twist`, add them both and publish the result to `gps_pos`.
+> - Keep a local `Twist` of the current position.
+> - Whenever you get a `Twist` from `input_cmd` or `correction_cmd`, add it to the current position.
+> - Publish the current position to `gps_pos`.every second.
 
 
 ## Step-by-Step Instructions
