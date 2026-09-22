@@ -9,8 +9,6 @@ This will help you understand the core communication mechanisms in ROS, which ar
 - Create a package inside the Docker image
 - Create a simple publisher-subscriber system
 
-### Approximate Time: 1h30
-
 ## Scenario: Controlling the Rover
 
 Imagine you are tasked with developing the command system for our rover.
@@ -121,27 +119,27 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
 	#include "rclcpp/rclcpp.hpp"
 
 	class TrajectoryPublisher : public rclcpp::Node {
-		public:
-			TrajectoryPublisher() : Node("trajectory_publisher") {
+	public:
+		TrajectoryPublisher() : Node("trajectory_publisher") {
 
-				// TODO: Create a publisher of type Twist
-				// Your code here...
+			// TODO: Create a publisher of type Twist
+			// Your code here...
 
-				RCLCPP_INFO(this->get_logger(), "Publisher node has been started");
-			}
+			RCLCPP_INFO(this->get_logger(), "Publisher node has been started");
+		}
 
-		private:
-			void cmd_acquisition() {
-				std::string command;
-				std::cout << "Enter command (w/a/s/d/t/y - max 2 characters): ";
-				std::cin >> command;
+	private:
+		void cmd_acquisition() {
+			std::string command;
+			std::cout << "Enter command (w/a/s/d/t/y - max 2 characters): ";
+			std::cin >> command;
 
-				// TODO: Complete the function to transform the input into the right command.
-				// Your code here...
-			}
+			// TODO: Complete the function to transform the input into the right command.
+			// Your code here...
+		}
 
-		private:
-			// TODO: Add private members here (publisher instance?)
+	private:
+		// TODO: Add private members here (publisher instance?)
 	};
 
 	int main(int argc, char* argv[]) {

@@ -6,7 +6,7 @@ This assignment is designed to help you get acquainted with ROS (Robot Operating
 
 > [!NOTE]
 >
-> The level 2a and 2b are not both mandatory.
+> From level 2 onwards, both paths (`a` and `b`) are not mandatory.
 >
 > You can choose whether you want to do the Python or C++ one, or do both to see the differences and help you choose for your rover infrastructure.
 
