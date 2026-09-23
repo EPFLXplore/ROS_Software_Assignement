@@ -1,17 +1,20 @@
 # Level 2: Package Creation and Topics
 
-Welcome to Level 2! In this level, you'll create a ROS package to control a virtual rover using a simple publisher-subscriber communication pattern. This will help you understand the core communication mechanisms in ROS, which are essential for building modular and scalable robotic applications.
+
+Welcome to Level 2! In this level, you'll create a ROS package to control a virtual rover using a simple publisher-subscriber communication pattern.
+
+This will help you understand the core communication mechanisms in ROS, which are essential for building modular and scalable robotic applications.
 
 ## Objectives
 
 - Create a package inside the Docker image
 - Create a simple publisher-subscriber system
 
-### Approximate Time: 1h30
-
 ## Scenario: Controlling the Rover
 
-Imagine you are tasked with developing the command system for our rover. Your job is to create a control interface that sends movement commands to the rover, and a system that interprets these commands to move the rover accordingly.
+Imagine you are tasked with developing the command system for our rover.
+
+Your job is to create a control interface that sends movement commands to the rover, and a system that interprets these commands to move the rover accordingly.
 
 You will create a publisher that sends `Twist` messages (a translation and rotation vector, see [doc](https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Twist.html)) based on user input, and a subscriber that receives these messages and interprets them as movement commands.
 
@@ -26,7 +29,7 @@ The publisher will send a `Twist` message, which the subscriber will interpret a
 - `t`: Rotate Left (+ry)
 - `y`: Rotate Right (-ry)
 
-![Rover Axes](image.png)
+![Rover Axes](../../image.png)
 
 ### Subscriber Interpretation
 
@@ -80,16 +83,18 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
    You will see that in the assignement a new folder appeared, it is your package. It should have the following content:
 
    ```
-   | rover_commands
-   | -- | resource
-   |    | -- | rover_commands
-   | -- | rover_commands
-   |    | -- | __init__.py
-   | -- | test
-   |    | -- | some files
-   | -- | package.xml
-   | -- | setup.cfg
-   | -- | setup.py
+	rover_commands/
+	├── package.xml
+	├── resource
+	│   └── rover_commands
+	├── rover_commands
+	│   └── __init__.py
+	├── setup.cfg
+	├── setup.py
+	└── test
+		├── test_copyright.py
+		├── test_flake8.py
+		└── test_pep257.py
    ```
 
 2. **Create the publisher script**:
@@ -99,8 +104,7 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
    Check that it also appears in Docker using:
 
    ```sh
-   cd ~/dev_ws/src/rover_commands/rover_commands
-   ls
+   ls ~/dev_ws/src/rover_commands/rover_commands
    ```
 
 3. **Edit the publisher script**:
@@ -112,30 +116,29 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
    from rclpy.node import Node
    from geometry_msgs.msg import Twist
 
-   class TrajectoryPublisher(Node):
+	class TrajectoryPublisher(Node):
 
-       def __init__(self):
-           super().__init__('trajectory_publisher')
+		def __init__(self):
+			super().__init__('trajectory_publisher')
            # TODO: Create a publisher of type Twist
-           # Your code here
+           # Your code here...
 
 
-           self.get_logger().info('Publisher node has been started.')
+			self.get_logger().info('Publisher node has been started.')
 
-           # TODO: Create a loop here to ask users a prompt and send messages accordingly
+			# TODO: Create a loop here to ask users a prompt and send messages accordingly
+			# Your code here...
 
 
-        # Function that prompts user for a direction input, and sends the command
-        def cmd_acquisition(self):
-           command = input("Enter command (w/a/s/d/t/y - max 2 characters): ")
-           # TODO: Complete the function to transform the input into the right command.
-           # Your code here
-           pass
+		def cmd_acquisition(self):
+			command = input("Enter command (w/a/s/d/t/y): ")
+			# TODO: Complete the function to transform the input into the right command.
+			# Your code here...
 
    def main(args=None):
-       rclpy.init(args=args)   # Init ROS python
-       node = TrajectoryPublisher()  # Create a Node instance
-       rclpy.spin(node)  # Run the node in a Thread
+       rclpy.init(args=args)
+       node = TrajectoryPublisher()
+       rclpy.spin(node)
        node.destroy_node()
        rclpy.shutdown()
 
@@ -143,7 +146,7 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
        main()
    ```
 
-   This script defines a `TrajectoryPublisher` node that waits for user input and publishes a `Twist` message based on the command. The `cmd_acquisition` function is called indefinitely to prompt for user input.
+   This code defines a `TrajectoryPublisher` node that waits for user input and publishes a `Twist` message based on the command. The `cmd_acquisition` function is called indefinitely to prompt for user input.
 
    Now your turn to complete it! Use online resources such as [ROS doc](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html).
 
@@ -170,8 +173,7 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
    Check that it also appears in Docker using:
 
    ```sh
-   cd ~/dev_ws/src/rover_commands/rover_commands
-   ls
+   ls ~/dev_ws/src/rover_commands/rover_commands
    ```
 
 2. **Edit the subscriber script**:
@@ -188,14 +190,14 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
        def __init__(self):
            super().__init__('trajectory_subscriber')
            # TODO: Create a subscriber of type Twist, that calls listener_callback
-           # Your code here
+           # Your code here...
 
            self.get_logger().info('Subscriber node has been started.')
            self.position = {'x': 0.0, 'z': 0.0, 'ry': 0.0}
 
        def listener_callback(self, msg):
            # TODO: Interpret the received commands and log the result using self.get_logger().info()
-           # Your code here
+           # Your code here...
 
            self.get_logger().info(f'New Position: {self.position}')
 

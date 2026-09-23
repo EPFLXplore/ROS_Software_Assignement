@@ -126,12 +126,15 @@ It will also print the position: “New Position: `[x, z, orientation (Ry)]`”,
 			// Your code here...
 
 			RCLCPP_INFO(this->get_logger(), "Publisher node has been started");
+
+			// TODO: Create a loop here to ask users a prompt and send messages accordingly
+			// Your code here...
 		}
 
 	private:
 		void cmd_acquisition() {
 			std::string command;
-			std::cout << "Enter command (w/a/s/d/t/y - max 2 characters): ";
+			std::cout << "Enter command (w/a/s/d/t/y): ";
 			std::cin >> command;
 
 			// TODO: Complete the function to transform the input into the right command.

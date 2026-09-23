@@ -23,7 +23,7 @@ In addition to what you did in level 2, you will now have to work with the follo
 >
 > - Keep a local `Twist` of the current position.
 > - Whenever you get a `Twist` from `input_cmd` or `correction_cmd`, add it to the current position.
-> - Publish the current position to `gps_pos`.every second.
+> - Publish the current position to `gps_pos` every second.
 
 
 ## Step-by-Step Instructions
