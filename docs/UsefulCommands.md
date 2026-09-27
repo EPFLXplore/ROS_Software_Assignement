@@ -15,6 +15,7 @@
 - `mv <source> <destination>` - Move: Moves or renames files or directories.
 - `touch <file>` - Touch: Creates an empty file or updates the timestamp of an existing file.
 - `nano <file>` - Nano Editor: Opens the Nano text editor to edit a file.
+- `vim <file>` - VIM Editor: Opens the VIM text editor to edit a file. (based)
 
 ### System Information
 
